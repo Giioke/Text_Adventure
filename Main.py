@@ -13,10 +13,12 @@ screen_width = 100
 class player:
     def __intit__(self):
         self.name = ''
+        self.job = ''
         self.health = 0
         self.mana = 0
         self.status_effects = []
         self.location = 'start'
+        self.game_over = False
 myPlayer = player()
 
 #### Title Screen ####
@@ -58,9 +60,7 @@ def help_menu():
 
 
 
-##### Game Functionality ######
-def start_game():
-    return
+
 
 #### Game Interactivity #######
 def print_location():
@@ -107,6 +107,11 @@ def movement_handler():
     myPlayer.location = destination
     pass
 
+def player_examine(action):
+    if zonemap[myPlayer.location][Solved]:
+        print("You have already defeated this area!")
+    else:
+        print("You can trigger an event!")
 
 
 
@@ -303,3 +308,50 @@ zone_Map = {
      },
 }
 
+
+
+
+##### Game Functionality ######
+def start_game():
+    return
+
+def main_game_loop():
+    while myPlayer.game_over is False:
+        prompt()
+    # Here handle if puzzles solved, bosses defeated, etc.
+
+def setup_game():
+    os.system('clear')
+
+#### Name Collecting #######
+    question1 = "Hello, what's your name?\n"
+    for character in question1:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    player_name = input("> ")
+    myPlayer.name = player_name
+
+    question2 = "Hello, what role do you want to play?\n"
+    statement1 = "Are you a warrior, mage, archer, or priest?\n"
+    for character in question1:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    for character in statement1:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    player_name = input("> ")
+    valid_jobs = ['warrior','mage','archer','preist']
+    if player_job.lower() in valid_jobs:
+        myPlayer.job = player_job
+        print("You are indeed a mighty " + player_job + "\n")
+    while player_job.lower() not in valid_jobs:
+        player_job = input("> ")
+        if player_job.lower() in valid_jobs:
+            myPlayer.job = player_job
+            print("You are indeed a mighty " + player_job + "\n")
+
+
+title_screen()
