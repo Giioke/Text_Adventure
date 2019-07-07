@@ -48,6 +48,7 @@ def title_screen():
 
 
 def help_menu():
+    os.system('cls')
     print('##########################################')
     print('############# The Help Menu ##############')
     print('##########################################')
@@ -56,7 +57,7 @@ def help_menu():
     print('###- Type "look" to inspect somthing! -###')
     print('###### - Good luck and have fun! - #######')
     print('##########################################')
-    time.sleep(15)
+    time.sleep(10)
     title_screen()
 
 
@@ -343,7 +344,7 @@ def setup_game():
         sys.stdout.flush()
         time.sleep(0.05)
     player_job = input("> ")
-    valid_jobs = ['warrior','mage','archer','preist']
+    valid_jobs = ['warrior','mage','archer','priest']
     if player_job.lower() in valid_jobs:
         myPlayer.job = player_job
         print("You are indeed a mighty " + player_job + "\n")
@@ -400,7 +401,7 @@ def setup_game():
     print("#####################################")
     print("######## Your story begins... #######")
     print("#####################################")
-    time.sleep(15)
+    time.sleep(10)
     main_game_loop()
 
 

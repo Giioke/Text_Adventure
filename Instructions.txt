@@ -4,5 +4,8 @@
 ##### There is a bug where the Narrator will ask you what your name
         twice instead of asking what your role will be.
 
-##### Game freezes if player selects Priest as a class.
+#####  File "Main.py", line 369, in setup_game
+       self.health = 100
+       NameError: name 'self' is not defined
 
+########
