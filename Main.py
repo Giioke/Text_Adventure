@@ -354,4 +354,58 @@ def setup_game():
             print("You are indeed a mighty " + player_job + "\n")
 
 
+##### Class Stats #########
+    if myPlayer.job is "warrior":
+        self.health = 200
+        self.mana = 50
+    elif myPlayer.job is "mage":
+        self.health = 80
+        self.mana = 200
+    elif myPlayer.job is "archer":
+        self.health = 150
+        self.mana = 100
+    else myPlayer.job is "priest":
+        self.health = 100
+        self.mana = 150
+
+##### Introduction #######
+    narrator1 = "Hello, what's your name?\n"
+    for character in narrator1:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+
+    narator2 = "Welcome " + myPlayer.name + " to this fantasy world!"
+    narator3 = "I hope you have fun!"
+    narator4 = "Just make sure you don't get too lost!"
+    narator5 = "Remember you can always go back home!"
+    for character in narator2:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    for character in narator3:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    for character in narator4:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+    for character in narator5:
+        sys.stdout.write(character)
+        sis.stdout.flush()
+        time.sleep(0.05)
+
+    os.system('clear')
+    print("#####################################")
+    Print("######## Your story begins... #######")
+    print("#####################################")
+    main_game_loop()
+
+
+
+
+
+
+
 title_screen()
