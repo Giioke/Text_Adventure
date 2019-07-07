@@ -335,13 +335,13 @@ def setup_game():
     statement1 = "Are you a warrior, mage, archer, or priest?\n"
     for character in question1:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
     for character in statement1:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
-    player_name = input("> ")
+    player_job = input("> ")
     valid_jobs = ['warrior','mage','archer','preist']
     if player_job.lower() in valid_jobs:
         myPlayer.job = player_job

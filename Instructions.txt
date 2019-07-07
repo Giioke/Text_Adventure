@@ -1,1 +1,5 @@
 ### Instructions ###
+
+
+##### There is a bug where the Narrator will ask you what your name
+        twice instead of asking what your role will be.
