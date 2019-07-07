@@ -3,3 +3,6 @@
 
 # To make sure requerments are installed
 pip install -r requirements.txt
+
+
+# Inspiration from: https://www.youtube.com/watch?v=MFW8DJ6qsak&list=PL1-slM0ZOosXf2oQYZpTRAoeuo0TPiGpm&index=1
