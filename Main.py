@@ -35,7 +35,7 @@ def title_screen_selections():
         title_screen_selections()
 
 def title_screen():
-    os.system('clear')
+    os.system('cls')
     print('################################')
     print('##### Welcome to Text RPG!######')
     print('################################')
@@ -56,7 +56,8 @@ def help_menu():
     print('###- Type "look" to inspect somthing! -###')
     print('###### - Good luck and have fun! - #######')
     print('##########################################')
-
+    time.sleep(15)
+    title_screen()
 
 
 
@@ -315,12 +316,12 @@ zone_Map = {
 ##### Game Functionality ######
 
 def main_game_loop():
-    while myPlayer.game_over is False:
+    while player.game_over is False:
         prompt()
     # Here handle if puzzles solved, bosses defeated, etc.
 
 def setup_game():
-    os.system('clear')
+    os.system('cls')
 
 #### Name Collecting #######
     question1 = "Hello, what's your name?\n"
@@ -371,34 +372,35 @@ def setup_game():
     narrator1 = "Hello, what's your name?\n"
     for character in narrator1:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
 
-    narator2 = "Welcome " + myPlayer.name + " to this fantasy world!"
-    narator3 = "I hope you have fun!"
-    narator4 = "Just make sure you don't get too lost!"
-    narator5 = "Remember you can always go back home!"
+    narator2 = "Welcome " + myPlayer.name + " to this fantasy world!\n"
+    narator3 = "I hope you have fun!\n"
+    narator4 = "Just make sure you don't get too lost!\n"
+    narator5 = "Remember you can always go back home!\n"
     for character in narator2:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
     for character in narator3:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
     for character in narator4:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
     for character in narator5:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
 
-    os.system('clear')
+    os.system('cls')
     print("#####################################")
-    Print("######## Your story begins... #######")
+    print("######## Your story begins... #######")
     print("#####################################")
+    time.sleep(15)
     main_game_loop()
 
 
