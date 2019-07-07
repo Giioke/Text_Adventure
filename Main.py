@@ -25,7 +25,7 @@ myPlayer = player()
 def title_screen_selections():
     option = input("> ")
     if option.lower() == ("play"):
-        start_game()   # Placeholder until written
+        setup_game()   # Placeholder until written
     elif option.lower() == ("help"):
         help_menu()
     elif option.lower() == ("quit"):
@@ -150,7 +150,7 @@ zone_Map = {
     'a1': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: False,
         Down: 'b1',
@@ -160,7 +160,7 @@ zone_Map = {
     'a2': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: False,
         Down: 'b2',
@@ -170,7 +170,7 @@ zone_Map = {
      'a3': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: False,
         Down: 'b3',
@@ -180,7 +180,7 @@ zone_Map = {
      'a4': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: False,
         Down: 'b4',
@@ -190,7 +190,7 @@ zone_Map = {
      'b1': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'a1',
         Down: 'c1',
@@ -210,7 +210,7 @@ zone_Map = {
      'b3': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'a3',
         Down: 'c3',
@@ -220,7 +220,7 @@ zone_Map = {
      'b4': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'a4',
         Down: 'c4',
@@ -230,7 +230,7 @@ zone_Map = {
      'c1': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look'
+        Study: '',
         Solved: False,
         Up: 'b1',
         Down: 'd1',
@@ -240,7 +240,7 @@ zone_Map = {
      'c2': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'b2',
         Down: 'd2',
@@ -250,7 +250,7 @@ zone_Map = {
      'c3': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'b3',
         Down: 'd3',
@@ -260,7 +260,7 @@ zone_Map = {
      'c4': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'b4',
         Down: 'd4',
@@ -270,7 +270,7 @@ zone_Map = {
      'd1': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'c1',
         Down: False,
@@ -280,7 +280,7 @@ zone_Map = {
      'd2': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'c2',
         Down: False,
@@ -290,7 +290,7 @@ zone_Map = {
      'd3': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'c3',
         Down: False,
@@ -300,7 +300,7 @@ zone_Map = {
      'd4': {
         zone_Name: "",
         zone_Description: 'description',
-        Study: 'study', 'examine', 'look',
+        Study: '',
         Solved: False,
         Up: 'c4',
         Down: False,
@@ -313,8 +313,6 @@ zone_Map = {
 
 
 ##### Game Functionality ######
-def start_game():
-    return
 
 def main_game_loop():
     while myPlayer.game_over is False:
@@ -328,7 +326,7 @@ def setup_game():
     question1 = "Hello, what's your name?\n"
     for character in question1:
         sys.stdout.write(character)
-        sis.stdout.flush()
+        sys.stdout.flush()
         time.sleep(0.05)
     player_name = input("> ")
     myPlayer.name = player_name
@@ -365,7 +363,7 @@ def setup_game():
     elif myPlayer.job is "archer":
         self.health = 150
         self.mana = 100
-    else myPlayer.job is "priest":
+    elif myPlayer.job == "priest":
         self.health = 100
         self.mana = 150
 
