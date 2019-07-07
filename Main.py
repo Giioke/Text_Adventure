@@ -74,10 +74,38 @@ def prompt():
     print("What would you like to do?")
     action = input("> ")
     acceptable_actions = ['move','go','travel','walk','quit','study','examine',
-                          'inspect','look','up','down','left','right','speak']
+                          'inspect','look','speak']
     print("\n" + "============================")
+    while action.lower() not acceptable_actions:
+        print('Unknown action, try again.\n')
+        action = input("> ")
+    if action.lower() == 'quit':
+        sys.exit()
+    elif action.lower() in ['move','go','travel','walk']:
+        player_move(action.lower())
+    elif action.lower() in ['study','examine','inspect','look']:
+        player_examine(action.lower())
 
+def player_move(myAction):
+    ask = "Where would you like to move to?\n"
+    dest = input(ask)
+    if dest == in ["up","north"]:
+        destination = zone_Map[myPlayer.location][Up]
+        movement_handler(destination)
+    elif dest == in ["down","south"]:
+        destination = zone_Map[myPlayer.location][Down]
+        movement_handler(destination)
+    elif dest == in ["right","east"]:
+        destination = zone_Map[myPlayer.location][Right]
+        movement_handler(destination)
+    elif dest == in ["left","west"]:
+        destination = zone_Map[myPlayer.location][Left]
+        movement_handler(destination)
 
+def movement_handler():
+    print("\n" + "You have arrived at " + destination + ".")
+    myPlayer.location = destination
+    pass
 
 
 
