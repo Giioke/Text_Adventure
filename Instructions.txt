@@ -4,8 +4,11 @@
 ##### There is a bug where the Narrator will ask you what your name
         twice instead of asking what your role will be.
 
-#####  File "Main.py", line 369, in setup_game
-       self.health = 100
-       NameError: name 'self' is not defined
+#####  (Only happens when priest is class choice)
+                File "Main.py", line 369, in setup_game
+                self.health = 100
+                NameError: name 'self' is not defined
 
-########
+#####  File "Main.py", line 320, in main_game_loop
+       while myPlayer.game_over is False:
+       AttributeError: 'player' object has no attribute 'game_over'

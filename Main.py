@@ -17,7 +17,7 @@ class player:
         self.health = 0
         self.mana = 0
         self.status_effects = []
-        self.location = 'start'
+        self.location = 'b2'
         self.game_over = False
 myPlayer = player()
 
@@ -68,7 +68,7 @@ def help_menu():
 def print_location():
     print('\n' + ('#' * (4 * len(myPlayer.location))))
     print('# ' + myPlayer.location.upper() +' #')
-    print('# ' + zone_Map[myPlayer.position][zone_Description])
+    print('# ' + zone_Map[myPlayer.location][zone_Description])
     print('\n' + ('#' * (4 * len(myPlayer.location))))
 
 def prompt():
@@ -318,7 +318,7 @@ zone_Map = {
 
 def main_game_loop():
     while player.game_over is False:
-        prompt()
+        prompt("What would you like to do?")
     # Here handle if puzzles solved, bosses defeated, etc.
 
 def setup_game():
