@@ -89,16 +89,16 @@ def prompt():
 def player_move(myAction):
     ask = "Where would you like to move to?\n"
     dest = input(ask)
-    if dest == in ["up","north"]:
+    if dest is ["up","north"]:
         destination = zone_Map[myPlayer.location][Up]
         movement_handler(destination)
-    elif dest == in ["down","south"]:
+    elif dest is ["down","south"]:
         destination = zone_Map[myPlayer.location][Down]
         movement_handler(destination)
-    elif dest == in ["right","east"]:
+    elif dest is ["right","east"]:
         destination = zone_Map[myPlayer.location][Right]
         movement_handler(destination)
-    elif dest == in ["left","west"]:
+    elif dest is ["left","west"]:
         destination = zone_Map[myPlayer.location][Left]
         movement_handler(destination)
 
@@ -147,164 +147,164 @@ solved_places = {'a1': False,'a2': False,'a3': False,'a4': False,
 
 zone_Map = {
     'a1': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = False
-        Down = 'b1'
-        Left = False
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = False,
+        Down = 'b1',
+        Left = False,
         Right = 'a2'
-    },
+          },
     'a2': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = False
-        Down = 'b2'
-        Left = 'a1'
-        Right = 'a3'
-    },
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = False,
+        Down = 'b2',
+        Left = 'a1',
+        Right = 'a3',
+          },
      'a3': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = False
-        Down = 'b3'
-        Left = 'a2'
-        Right = 'a4'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = False,
+        Down = 'b3',
+        Left = 'a2',
+        Right = 'a4',
     },
      'a4': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = False
-        Down = 'b4'
-        Left = 'a3'
-        Right = False
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = False,
+        Down = 'b4',
+        Left = 'a3',
+        Right = False,
     },
      'b1': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'a1'
-        Down = 'c1'
-        Left = False
-        Right = 'b2'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'a1',
+        Down = 'c1',
+        Left = False,
+        Right = 'b2',
     },
      'b2': {
-        zone_Name: "Home"
-        zone_Description = 'This is your home!'
-        Study = 'The place is well kept!'
-        Solved = False
-        Up = 'a2'
-        Down = 'c2'
-        Left = 'b1'
-        Right = 'b3'
+        zone_Name: "Home",
+        zone_Description = 'This is your home!',
+        Study = 'The place is well kept!',
+        Solved = False,
+        Up = 'a2',
+        Down = 'c2',
+        Left = 'b1',
+        Right = 'b3',
      },
      'b3': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'a3'
-        Down = 'c3'
-        Left = 'b2'
-        Right = 'b4'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'a3',
+        Down = 'c3',
+        Left = 'b2',
+        Right = 'b4',
      },
      'b4': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'a4'
-        Down = 'c4'
-        Left = 'b3'
-        Right = False
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'a4',
+        Down = 'c4',
+        Left = 'b3',
+        Right = False,
      },
      'c1': {
-        zone_Name: ""
-        zone_Description = 'description'
+        zone_Name: "",
+        zone_Description = 'description',
         Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'b1'
-        Down = 'd1'
-        Left = False
-        Right = 'c2'
+        Solved = False,
+        Up = 'b1',
+        Down = 'd1',
+        Left = False,
+        Right = 'c2',
      },
      'c2': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'b2'
-        Down = 'd2'
-        Left = 'c1'
-        Right = 'c3'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'b2',
+        Down = 'd2',
+        Left = 'c1',
+        Right = 'c3',
      },
      'c3': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'b3'
-        Down = 'd3'
-        Left = 'c2'
-        Right = 'c4'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'b3',
+        Down = 'd3',
+        Left = 'c2',
+        Right = 'c4',
      },
      'c4': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'b4'
-        Down = 'd4'
-        Left = 'c3'
-        Right = False
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'b4',
+        Down = 'd4',
+        Left = 'c3',
+        Right = False,
      },
      'd1': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'c1'
-        Down = False
-        Left = False
-        Right = 'd2'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'c1',
+        Down = False,
+        Left = False,
+        Right = 'd2',
      },
      'd2': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'c2'
-        Down = False
-        Left = 'd1'
-        Right = 'd3'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'c2',
+        Down = False,
+        Left = 'd1',
+        Right = 'd3',
      },
      'd3': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'c3'
-        Down = False
-        Left = 'd2'
-        Right = 'd4'
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'c3',
+        Down = False,
+        Left = 'd2',
+        Right = 'd4',
      },
      'd4': {
-        zone_Name: ""
-        zone_Description = 'description'
-        Study = 'study', 'examine', 'look'
-        Solved = False
-        Up = 'c4'
-        Down = False
-        Left = 'd3'
-        Right = False
+        zone_Name: "",
+        zone_Description = 'description',
+        Study = 'study', 'examine', 'look',
+        Solved = False,
+        Up = 'c4',
+        Down = False,
+        Left = 'd3',
+        Right = False,
      },
 }
 
